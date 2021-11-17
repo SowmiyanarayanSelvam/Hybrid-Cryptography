@@ -113,7 +113,21 @@ class HybridEncryption:
 HE1 = HybridEncryption(verbosity=True)
 HE2 = HybridEncryption(verbosity=True)
 m1, m2, hash, key = HE1.hybEncrypt("Hello there. I am Mithran. I am trying to use a message here. So let's see what happens.", "this is a key", HE2.getPublicKey())
-print(HE2.hybDecrypt(m1, m2, hash, key))
+
+print('Encrypted Cipher Text')
+print(m1)
+print()
+print(m2)
+print()
+print(hash)
+print()
+print(key)
+print()
+
+print('Decrypted Plain Text')
+M = HE2.hybDecrypt(m1, m2, hash, key)
+
+print(M)
 
 
 
